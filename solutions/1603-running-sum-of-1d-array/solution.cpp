@@ -1,0 +1,12 @@
+class Solution {
+public:
+    vector<int> runningSum(vector<int>& nums) {
+        std::vector<int> arr(nums.size());
+        arr[0] = nums[0];
+
+        for(int i=1;i<nums.size();i++){
+            arr[i] = nums[i]+ arr[i-1];
+        }
+        return arr;
+    }
+};
